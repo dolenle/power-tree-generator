@@ -96,6 +96,18 @@ class PtNode {
         this.update();
         parent.update();
     }
+    isParent(node) {
+        for(let c of this.children) {
+            if(c === node) {
+                return true;
+            } else {
+                if(c.isParent(node)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
 
 class PtSource extends PtNode {
@@ -323,7 +335,7 @@ function acceptDroppable(node) {
     } else if(drag instanceof PtRail) {
         if(target instanceof PtLoad) {
             ret = false;
-        } else if(drag.children.includes(target)) {
+        } else if(drag.isParent(target)) {
             ret = false;
         } else {
             ret = true;
@@ -385,9 +397,9 @@ function startEditable(handle, target) {
 
 $( function() {
     // init example tree
-    src_12v = new PtSource("12V_VIN", 12);
+    let src_12v = new PtSource("12V_VIN", 12);
     let buck_5V = new PtRail(src_12v, "5V_BUCK", PtRail.DCDC, 5, 85);
-    ldo_3v3 = new PtRail(buck_5V, "3V3_LDO", PtRail.LDO, 3.3);
+    let ldo_3v3 = new PtRail(buck_5V, "3V3_LDO", PtRail.LDO, 3.3);
     let ld_1 = new PtLoad(buck_5V, "LED Matrix", 1.4);
     let ld_2 = new PtLoad(ldo_3v3, "STM32_VDD", 0.1);
     let ld_3 = new PtLoad(ldo_3v3, "BME680_VDD", 0.05);

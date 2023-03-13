@@ -27,3 +27,4 @@ Some potential ideas for improvements:
 - Option to toggle enable/disable nodes
 - Animations
 - Dynamic tree shape based on viewport size
+- Detect invalid configurations

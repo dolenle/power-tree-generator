@@ -277,7 +277,7 @@ function addSource() {
 }
 
 function addRail(handle, type=PtRail.DCDC) {
-    new PtRail(handle, "New "+type, type, 1, 100);
+    new PtRail(handle, "New "+type, type, 1, 85);
     redraw();
 }
 

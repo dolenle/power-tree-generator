@@ -13,18 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">    
-</head>
-<body>
-    <h1>Power Tree Generator</h1>
-    <p>By Dolen Le - <a href="https://github.com/dolenle/power-tree-generator">View on GitHub</a></p><br>
-    <p>
-        <button onclick="addSource()">Add Power Source</button>
-        <!-- <button>Import</button> -->
-        <!-- <button>Export</button> -->
-    </p>
-    <br>
-    <div class="chart" id="tree-container"></div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
     <!-- <script src="scripts/raphael.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
     
@@ -39,5 +29,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.js"></script>
     
     <script src="scripts/PowerTreeGen.js"></script>
+</head>
+<body>
+    <h1>Power Tree Generator</h1>
+    <p>By Dolen Le - <a href="https://github.com/dolenle/power-tree-generator">View on GitHub</a></p><br>
+    <p>
+        <button onclick="addSource()">Add Power Source</button>
+        <button onclick="getLink()">Copy Link</button>
+        <button onclick="saveFile()">Save</button>
+        <button onclick="loadFile()">Load</button>
+        <input type="file" style="display:none" id="loadfile">
+    </p>
+    <div class="chart" id="tree-container"></div>
 </body>
 </html>

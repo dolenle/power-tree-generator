@@ -1,6 +1,8 @@
 body {
     margin:10px;
     font-family: Tahoma;
+    display: flex;
+    flex-direction: column;
 }
 div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
     margin:0;
@@ -82,4 +84,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .ui-helper-hidden-accessible 
 {
     display: none;
+}
+
+.context-menu-submenu > .context-menu-list {
+    z-index: 2;
 }

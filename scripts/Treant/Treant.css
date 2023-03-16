@@ -1,6 +1,6 @@
 /* required LIB STYLES */
 /* .Treant se automatski dodaje na svaki chart conatiner */
-.Treant { position: relative; overflow: hidden; padding: 0 !important; }
+.Treant { position: relative; overflow: visible; padding: 0 !important; }
 .Treant > .node,
 .Treant > .pseudo { position: absolute; display: block; visibility: hidden; }
 .Treant.Treant-loaded .node,

@@ -47,6 +47,27 @@ body {
     width: 180px;
     font-size: 12px;
 }
+
+.Treant > .node.ptSrc {
+    background-color: aqua;
+}
+
+.Treant > .node.ptDCDC {
+    background-color: bisque;
+}
+
+.Treant > .node.ptLDO {
+    background-color: thistle;
+}
+
+.Treant > .node.ptLSW {
+    background-color: paleturquoise;
+}
+
+.Treant > .node.ptNode {
+    background-color: lightpink;
+}
+
 .Treant > p {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: bold;

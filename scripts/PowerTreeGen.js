@@ -151,6 +151,7 @@ class PtSrc extends PtNode {
         this.fields.i_out = new PtField(0, "Output Current", "A");
         this.HTMLclass = "ptSrc";
     }
+    
     update(up=true) {
         let i_total = 0;
         this.children.forEach(c => {
@@ -167,6 +168,10 @@ class PtRail extends PtNode {
         this.fields.i_in = new PtField(0, "Input Current", "A");
         this.fields.v_out = new PtField(v_out, "Output Voltage", "V");
         this.fields.i_out = new PtField(0, "Output Current", "A");
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6753d65f79bc3b0abaea89feab196cad0eb16677
         this.HTMLclass = "ptRail";
     }
     getTotalCurrent() {

@@ -151,7 +151,6 @@ class PtSrc extends PtNode {
         this.fields.i_out = new PtField(0, "Output Current", "A");
         this.HTMLclass = "ptSrc";
     }
-    
     update(up=true) {
         let i_total = 0;
         this.children.forEach(c => {

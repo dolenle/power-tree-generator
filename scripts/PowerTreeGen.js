@@ -49,6 +49,7 @@ class PtNode {
         this.parent = null;
         this.children = [];
         this.name = name;
+        this.HTMLclass = "ptNode";
         this.disabled = disabled;
         let self = this;
         this.fields = {
@@ -148,6 +149,7 @@ class PtSrc extends PtNode {
         super(null, name, disabled);
         this.fields.v_out = new PtField(v_out, "Output Voltage", "V", false, true);
         this.fields.i_out = new PtField(0, "Output Current", "A");
+        this.HTMLclass = "ptSrc";
     }
     update(up=true) {
         let i_total = 0;
@@ -165,6 +167,7 @@ class PtRail extends PtNode {
         this.fields.i_in = new PtField(0, "Input Current", "A");
         this.fields.v_out = new PtField(v_out, "Output Voltage", "V");
         this.fields.i_out = new PtField(0, "Output Current", "A");
+        this.HTMLclass = "ptRail";
     }
     getTotalCurrent() {
         let i_total = 0;
@@ -188,6 +191,7 @@ class PtLDO extends PtRail {
         this.fields.v_out.editable = true;
         this.fields.eff = new PtField(this.fields.v_out / this.parent.fields.v_in * 100, "Efficiency", "%");
         this.fields.loss = new PtField(this.fields.p_in-this.fields.p_out, "Power Loss", "W");
+        this.HTMLclass = "ptLDO";
     }
     update(up=true) {
         this.fields.i_in.value = this.getTotalCurrent();
@@ -204,6 +208,7 @@ class PtDCDC extends PtRail {
         this.fields.eff = new PtField(eff, "Efficiency", "%", false, true);
         this.fields.loss = new PtField(this.fields.p_in-this.fields.p_out, "Power Loss", "W");
         this.fields.p_in_int = new PtField(0, "P_I", "W", true, false); 
+        this.HTMLclass = "ptDCDC";
     }
     update(up=true) {
         this.getTotalCurrent();
@@ -219,6 +224,7 @@ class PtLSW extends PtRail {
         this.fields.v_out.value = this.fields.v_in.value;
         this.fields.rds = new PtField(rds, "RDS(ON)", "mΩ", false, true);
         this.fields.loss = new PtField(this.fields.p_in-this.fields.p_out, "Power Loss", "W");
+        this.HTMLclass = "ptLSW";
     }
     update(up=true) {
         let num_iter = 0;

@@ -390,7 +390,7 @@ function deserializePt(obj, parent=null) {
 function loadJSON(input) {
     tree_root.children = [];
     let obj = JSON.parse(input);
-    console.log(input);
+    // console.log(input);
     if(obj[0] == JSON_VER) {
         for(src of obj[1]) {
             tree_root.children.push(deserializePt(src));

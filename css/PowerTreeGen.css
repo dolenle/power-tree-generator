@@ -49,7 +49,7 @@ body {
 }
 
 .Treant > .node.ptSrc {
-    background-color: aqua;
+    background-color: lightpink;
 }
 
 .Treant > .node.ptDCDC {
@@ -57,15 +57,15 @@ body {
 }
 
 .Treant > .node.ptLDO {
-    background-color: thistle;
+    background-color: palegoldenrod;
 }
 
 .Treant > .node.ptLSW {
-    background-color: paleturquoise;
+    background-color: thistle;
 }
 
 .Treant > .node.ptNode {
-    background-color: lightpink;
+    background-color: paleturquoise;
 }
 
 .Treant > p {

@@ -1,10 +1,17 @@
 # Power Tree Generator
 
-[Demo](https://dolenle.com/ptg_demo/)
+[**DEMO**](https://dolenle.github.io/power-tree-generator/)
 
-In the context of electrical engineering, a power tree is a diagrammatic representation of the flow of power in a given system. Power supplying, converting, and consuming devices are represented as nodes in the tree. Links between the nodes signify electrical connections between the devices. Power trees are typically used by engineers to identify efficiency losses in a system, as well as to help identify potential power distribution issues in a design before it is manufactured.
+In the context of electrical engineering, a power tree is a diagrammatic representation of the flow of power in a system. Power supplying, converting, and consuming devices are represented as nodes in the tree. Links between the nodes signify electrical connections between the devices. Power trees are typically used by engineers to estimate efficiency losses in a system, as well as to help identify potential power supply bottlenecks in a design.
 
-There are three supported node types: Source, Rail and Load. The Source node acts as an ideal DC supply with a fixed voltage. The Rail node represents power regulators with a fixed efficiency and/or output voltage. Three sub-types are provided: DCDC converter (buck/boost), LDO (linear regulator), and LSW (load switch). Rails can be connected to Sources, or to other Rail nodes. Finally, Load nodes act as constant current sinks, and can be attached to Rails, or directly to Sources.
+This tool implements three node types: Source, Rail and Load. The Source node acts as an ideal DC supply with a fixed voltage. The Rail node represents power regulators with a fixed efficiency and/or output voltage. The Rail node is further broken down into three sub-classes: DC-DC converter (buck/boost), linear regulator, and load switch. Rail nodes can be connected to Sources, or to other Rail nodes. Finally, Load nodes act as constant current sinks, and can be attached to Rails, or directly to Sources.
+
+Each node type has one or more editable parameters, which can be adjusted by double-clicking on the value.
+- Source: Output Voltage
+- DCDC: Output Voltage and Efficiency
+- LDO: Output Voltage
+- Load Switch: ON state resistance (R<sub>DS_ON</sub>)
+- Load: Current Draw
 
 This is a browser-based power tree creation and visualization tool, written in Javascript and using the following plugins:
 - [Treant.js](https://fperucic.github.io/treant-js/)
